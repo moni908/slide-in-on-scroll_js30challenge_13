@@ -1,5 +1,5 @@
 html {
-  box-sizing: border-box;
+box-sizing: border-box;
 background: #ffc600;
 font-family: 'helvetica neue';
 font-size: 20px;
@@ -10,9 +10,8 @@ body {
   margin: 0;
 }
 
-*, *:before. *:after {
+*, *:before, *:after { /*instead of comma, there was a period after before.*/
   box-sizing: inherit;
-  
 }
 
 h1 {
@@ -32,25 +31,25 @@ h1 {
   margin-right: 20px;
 }
 
-align-right {
+.align-right { /*.align is needed - had align-right, no period was put in beginning*/
   float: right;
   margin-left: 20px;
 }
 
-slide-in {
+.slide-in { /*.slide is needed - had slide-in, no period was put in beginning*/
   opacity: 0;
   transition: all .5s;
 }
 
 .align-left.slide-in {
-  transform: traslateX(-30%) scale(0.95);
+  transform: translateX(-30%) scale(0.95); /*translateX vs traslateX*/
 }
 
 .align-right.slide-in {
   transform: translateX(30%) scale(0.95);
 }
 
-.slide-in-active {
+.slide-in.active { /*period between in.active had in-active*/
   opacity: 1;
   transform: translateX(0%) scale(1);
 }
